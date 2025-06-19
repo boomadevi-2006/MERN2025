@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>sample1</title>
+</head>
+<body bgcolor="yellow">
+    <h1 id="header">HELLO BOOMA</h1>
+    <button onclick="fun()">change text</button><br>
+    <br>
+    <button onclick="fun2()">change color</button>
+    <br>
+    <br>
+    <input type="text" id="name" placeholder="Enter name">
+    <button onclick="addname()">add</button>
+    <ul id="li"></ul>
+
+    <script>
+        var fun = () => {
+            let greet = document.getElementById("header");
+            greet.innerHTML = (greet.innerHTML === "HELLO BOOMA") ? "HI BOOMA" : "HELLO BOOMA";
+            
+        }
+        var fun2= () =>{
+            let c=document.getElementById("header");
+            c.style.color = (c.style.color === "green") ? "red" : "green";
+            
+        }
+        var addname = () => {
+            var name=document.getElementById("name").value;
+            var li=document.createElement("li");
+            li.innerText=name;
+            document.getElementById("li").append(li);
+        }   
+     </script>
+</body>
+</html>
