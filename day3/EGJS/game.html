@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ROCK PAPER SCISSOR</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px; 
+            margin: 20px 0;
+        }
+
+
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ROCK PAPER SCISSOR</h1>
+    <h2>Choose your choice</h2>
+
+    <div class="button-container">
+        <button type="submit" onclick="choice('rock')">
+            <img src="rock.jpg" alt="Rock">
+        </button>
+        <button type="submit" onclick="choice('paper')">
+            <img src="paper.jpg" alt="Paper">
+        </button>
+        <button type="submit" onclick="choice('scissor')">
+            <img src="scissor.jpg" alt="Scissor">
+        </button>
+    </div>
+
+    <h1 id="result"> </h1>
+    <h1 id="score"> </h1>
+
+    <script>
+        let computerscore = 0;
+        let userscore = 0;
+
+        function choice(userchoice) {
+            const choices = ['rock', 'paper', 'scissor'];
+            const computerchoice = choices[Math.floor(Math.random() * 3)];
+            let result = "";
+
+            if (userchoice === computerchoice) {
+                result = "Draw";
+            } else if (
+                (userchoice === "rock" && computerchoice === "scissor") ||
+                (userchoice === "paper" && computerchoice === "rock") ||
+                (userchoice === "scissor" && computerchoice === "paper")
+            ) {
+                result = "User wins!";
+                userscore++;
+            } else {
+                result = "Computer wins!";
+                computerscore++;
+            }
+
+            document.getElementById("result").innerHTML =
+                `User choice: ${userchoice} <br> Computer choice: ${computerchoice} <br> Result: ${result}`;
+            document.getElementById("score").innerHTML =
+                `User score: ${userscore} <br> Computer score: ${computerscore}`;
+        }
+    </script>
+</body>
+
+</html>
