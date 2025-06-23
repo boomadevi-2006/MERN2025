@@ -1,0 +1,2 @@
+mongodb onnection link:
+mongodb+srv://boomadevis23it:boomadevi-2006@mern2025.smi3d4o.mongodb.net/
