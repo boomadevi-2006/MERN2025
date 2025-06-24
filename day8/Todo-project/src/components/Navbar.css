@@ -1,0 +1,34 @@
+.navbar{
+    display:flex;
+    background-color: gray;
+    padding: 20px;
+    
+}
+.link{
+    list-style: none;
+    background-color: greenyellow;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    
+}
+.link:hover{
+    background-color: green;
+    color: white;
+}
+.brand {
+  margin-right: auto;
+  background-color: green;
+  color: white;
+  border: 2px solid black;
+    border-radius: 10px;
+  font-weight: bold;
+  padding: 10px;
+}
+.nav-links {
+  display: flex;
+  gap: 10px; /* optional: keeps space between links */
+  justify-content: flex-end;
+}

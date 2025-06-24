@@ -1,0 +1,17 @@
+.login-container {
+    background-color: greenyellow;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 0px  green;
+    text-align: center;
+    width: 300px;
+    margin-left: 650px;
+    margin-top: 200px;      
+    }
+.login-container button{
+    padding:10px;
+    margin:10px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+}
